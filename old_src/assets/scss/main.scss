@@ -1,0 +1,29 @@
+// Import scss partials:
+
+// Core ones:
+@import 'core/variables';
+@import 'core/mixins';
+
+// Layout ones:
+@import 'layout/base';
+@import 'layout/headerLan';
+@import 'layout/mainLan';
+@import 'layout/footer';
+
+@import 'layout/headerApp';
+@import 'layout/preview';
+
+@import 'layout/panelCommonStyles';
+@import 'layout/panelDesign';
+@import 'layout/panelFillApp';
+@import 'layout/share';
+
+// Components
+@import 'components/buttons';
+
+// Javascrip associated styles
+@import 'js-styles/collapsible-animation';
+
+// Pages
+@import 'pages/cardmaker';
+

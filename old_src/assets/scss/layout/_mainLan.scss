@@ -1,0 +1,77 @@
+.page__main{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    align-items: center;    
+    text-align: center;
+    margin: 0px 30px 0px 30px;
+
+     @media all and (min-width:$mediaTablet){
+            margin: 0px 175px 0px 175px;
+        }
+}
+
+.page-main__title{
+    margin-top: 30px;
+    font-size: $font-size-L;
+    color: $color-secondary-600;
+    font-family: $font-style-Merry;
+    font-weight: $font-weight-thicker;
+    
+    @media all and (min-width:$mediaTablet){
+        width: 278px;
+        margin: auto;
+        margin-top: 30px;
+        font-size: $font-size-XL;
+    }
+}
+
+.page-main__subtitle{
+    font-size: $font-size-S;
+    font-family: $font-default;
+    color: $color-primary-800; 
+    font-weight: $font-weight-thin; 
+    
+    @media all and (min-width:$mediaTablet){
+        width: 331px;
+     }
+}
+
+// Landing page, section main, icons
+
+.main-cont-icons{
+    border: solid 2px rgba($color: $color-secondary-600, $alpha: 0.3);
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 25px;
+    width: 100%;
+}
+
+.main-item1-icons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  }
+
+.icon{
+  width: 26px;
+  @media all and (min-width:$mediaTablet){
+    width: 32px;
+}
+}
+
+.text-icons{
+   font-family: $font-default;
+   font-size: $font-size-XS;
+
+   @media all and (min-width:$mediaTablet){
+        font-size:$font-size-M;
+    }
+}
+
+
+

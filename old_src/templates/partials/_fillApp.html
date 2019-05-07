@@ -1,0 +1,60 @@
+<section class="panel">
+
+    <div class="panel__dropdown">
+        <div class="title-image__wrapper">
+            <img class="dropdown__icon-section" src="./assets/images/keyboard.svg" alt="">
+            <h2 class="dropdown__title">Rellena</h2>
+        </div>
+        <img class="dropdown__arrow--down" id="dropdown__down-arrow--fill" src="./assets/images/down-arrow.svg" alt="Abrir panel rellena">
+    </div>
+
+    <fieldset class="panel__fill-form panel--close">
+        <div class="dropdown__item">
+            <label class="item__label" for="name">Nombre completo
+                <span class="marker"> *</span>
+            </label>
+            <input class="item__info" type="text" id="fullName" data-id="card-name" placeholder="Monster Terribilus" name="name" required>    
+        </div>
+
+        <div class="dropdown__item">
+            <label class="item__label" for="job">Puesto
+                <span class="marker"> *</span>
+            </label>
+            <input class="item__info"  type="text" id="rol" data-id="card-job" placeholder="Front-end" name="job" required>    
+        </div>
+
+        <div class="dropdown__item">
+            <label class="item__label" for="photo">Imagen de perfil</label>
+            <div class="item__info--image-container">
+                <input type="file" class="js__profile-upload-btn item__info hidden__file--button" name="photo" id="personalImage">
+                <button type="button" class="item__info--button js__profile-trigger">Añadir imagen</button>
+                <div class="js__profile-preview item__info--thumbnail">
+            </div>
+            </div>
+        </div>
+
+        <div class="dropdown__item">
+            <label class="item__label"  for="phone">Teléfono
+                <span class="marker"> *</span>
+            </label>
+            <input class="item__info"  type="tel" id="phoneNumber" placeholder="123456789" maxlength="9" name="phone" pattern="^\d{3}\d{3}\d{3}$" title="ej: 123456789"  required>
+        </div>
+
+        <div class="dropdown__item">
+            <label class="item__label" for="email">Email
+                <span class="marker"> *</span>
+            </label>
+            <input class="item__info" type="email" id="email" placeholder="dontBeScared@gmail.com" name="email" required>    
+        </div>
+
+        <div class="dropdown__item">
+            <label class="item__label"  for="linkedin">Linkedin</label>
+            <input class="item__info"  type="url" id="linkedin" placeholder="linkedin.com/monsterYey" name="linkedin">    
+        </div>
+
+        <div class="dropdown__item">
+            <label class="item__label"  for="github">GitHub</label>
+            <input class="item__info"  type="text" id="github" placeholder="monsterYey" name="github"> 
+        </div>
+    </fieldset>
+</section>

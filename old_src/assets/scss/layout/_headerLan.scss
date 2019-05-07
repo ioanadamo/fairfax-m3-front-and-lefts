@@ -1,0 +1,15 @@
+.page__header{
+    margin: 100px auto 0px;
+    @media all and (min-width:$mediaTablet){
+        margin: 150px auto 0px;
+    }
+}
+
+.page-header__image{
+    width: 250px;
+    @media all and (min-width:$mediaTablet){
+        width: 420px;
+    }
+}
+
+
