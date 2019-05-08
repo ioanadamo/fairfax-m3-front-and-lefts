@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './stylesheets/main.scss';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -234,19 +235,7 @@ function App() {
                 </section>
             </main>
            
-            <footer className="footer__page">
-                <div className="footer__flex-wrapper column-center"> <small className="footer__copyright">Awesome profile-cards @2019</small>
-
-                    <div
-                    className="logos">
-                        <img src="assets/images/logo-disena-aventura.jpg" alt="Logo de Diseña tu aventura"
-                        className="footer__image--logo"/> <a className="footer__link" href="https://adalab.es/" target="blank">
-            <img src="assets/images/logo-adalab.png" alt="Logo de Adalab" className="footer__image"/>
-            </a>
-
-                </div>
-        </div>
-        </footer>
+            <Footer />
         </div>
   );
 }
