@@ -1,6 +1,5 @@
 import React from "react";
-import logoDisena from "../images/logo-disena-aventura.jpg";
-import logoAdalab from "../images/logo-adalab.png";
+
 
 class Footer extends React.Component {
   render() {
@@ -13,7 +12,7 @@ class Footer extends React.Component {
           </small>
           <div className="logos">
             <img
-              src={logoDisena}
+              src={this.props.firstLogo}
               alt="Logo de Diseña tu aventura"
               className="footer__image--logo"
             />{" "}
@@ -23,7 +22,7 @@ class Footer extends React.Component {
               target="blank"
             >
               <img
-                src={logoAdalab}
+                src={this.props.secondLogo}
                 alt="Logo de Adalab"
                 className="footer__image"
               />

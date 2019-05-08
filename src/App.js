@@ -1,5 +1,7 @@
 import React from 'react';
 import Footer from './components/Footer';
+import logoDisena from "./images/logo-disena-aventura.jpg";
+import logoAdalab from "./images/logo-adalab.png";
 
 function App() {
   return (
@@ -233,7 +235,7 @@ function App() {
                 </section>
             </main>
            
-            <Footer />
+            <Footer firstLogo={logoDisena} secondLogo={logoAdalab}/>
         </div>
   );
 }
