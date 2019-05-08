@@ -1,6 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
-import './stylesheets/main.scss';
 import Footer from './components/Footer';
 
 function App() {
