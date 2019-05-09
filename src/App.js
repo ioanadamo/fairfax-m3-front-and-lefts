@@ -4,6 +4,8 @@ import logoAdalab from "./images/logo-adalab.png";
 import logoAwesome from "./images/logo-awesome-profile-cards.svg";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import PreviewName from "./components/PreviewName";
+import PreviewJob from "./components/PreviewJob";
 import "./App.css";
 
 function App() {
@@ -58,13 +60,9 @@ function App() {
             </button>
             <div className="preview__card">
               <div className="deco-rectangle__card" />
-              <h2 className="full-name__card" id="card-name">
-                Nombre Apellido
-              </h2>
-
-              <h3 className="ocupation__card" id="card-job">
-                Front-end developer
-              </h3>
+              
+              <PreviewName nameSurname = "Nombre Apellidos"/>
+              <PreviewJob job = "Front-end Developer"/>
 
               <div className="photo__preview js__profile-image" />
 
