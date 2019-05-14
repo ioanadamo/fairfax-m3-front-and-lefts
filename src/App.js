@@ -2,6 +2,12 @@ import React from "react";
 import logoDisena from "./images/logo-disena-aventura.jpg";
 import logoAdalab from "./images/logo-adalab.png";
 import logoAwesome from "./images/logo-awesome-profile-cards.svg";
+import icoTrash from "./images/trash.svg";
+import icoUngroup from "./images/ungroup.svg";
+import icoDownArrow from "./images/down-arrow.svg";
+import icoIdCard from "./images/id-card.svg";
+import icoKeyboard from "./images/keyboard.svg";
+import icoShare from "./images/share.svg";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import PreviewName from "./components/PreviewName";
@@ -53,7 +59,7 @@ function App() {
             <button className="reset__button">
               <img
                 className="trash-icon"
-                src="assets/images/trash.svg"
+                src={icoTrash}
                 alt="imagen reset"
               />
               Reset
@@ -113,7 +119,7 @@ function App() {
                 <div className="title-image__wrapper">
                   <img
                     className="dropdown__icon-section"
-                    src="./assets/images/ungroup.svg"
+                    src={icoUngroup}
                     alt=""
                   />
                   <h2 className="dropdown__title">Diseña</h2>
@@ -121,7 +127,7 @@ function App() {
                 <img
                   className="dropdown__arrow--up"
                   id="dropdown__down-arrow--design"
-                  src="./assets/images/down-arrow.svg"
+                  src={icoDownArrow}
                   alt="Abrir panel diseña"
                 />
               </div>
@@ -194,19 +200,19 @@ function App() {
                 <div className="title-image__wrapper">
                   <img
                     className="dropdown__icon-section"
-                    src="./assets/images/keyboard.svg"
+                    src={icoKeyboard}
                     alt=""
                   />
                   <h2 className="dropdown__title">Rellena</h2>
                 </div>
                 <img
-                  className="dropdown__arrow--down"
+                  className="dropdown__arrow--up"
                   id="dropdown__down-arrow--fill"
-                  src="./assets/images/down-arrow.svg"
+                  src={icoDownArrow}
                   alt="Abrir panel rellena"
                 />
               </div>
-              <fieldset className="panel__fill-form panel--close">
+              <fieldset className="panel__fill-form">
                 <div className="dropdown__item">
                   <label className="item__label" for="name">
                     Nombre completo <span className="marker"> *</span>
@@ -315,23 +321,23 @@ function App() {
                 <div className="title-image__wrapper">
                   <img
                     className="dropdown__icon-section"
-                    src="./assets/images/share.svg"
+                    src={icoShare}
                     alt=""
                   />
                   <h2 className="dropdown__title">Comparte</h2>
                 </div>
                 <img
-                  className="dropdown__arrow--down"
+                  className="dropdown__arrow--up"
                   id="dropdown__down-arrow--share"
-                  src="./assets/images/down-arrow.svg"
+                  src={icoDownArrow}
                   alt="Abrir panel compartir"
                 />
               </div>
-              <div className="align_share panel--close">
+              <div className="align_share">
                 <button className="btn_share" type="submit">
                   <img
                     className="icon__id-card"
-                    src="assets/images/id-card.svg"
+                    src={icoIdCard}
                     alt="Crear tarjeta"
                   />
                   Crear Tarjeta
