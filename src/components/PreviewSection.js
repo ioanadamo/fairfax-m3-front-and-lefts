@@ -1,4 +1,6 @@
 import React from 'react';
+import PreviewName from './components/PreviewName';
+import PreviewJob from './components/PreviewJob';
 
 class PreviewSection extends React.Component {
 	render() {
@@ -15,13 +17,9 @@ class PreviewSection extends React.Component {
 					</button>
 					<div className="preview__card">
 						<div className="deco-rectangle__card" />
-						<h2 className="full-name__card" id="card-name">
-							Nombre Apellido
-						</h2>
+						<PreviewName nameSurname="Nombre Apellidos" />
 
-						<h3 className="ocupation__card" id="card-job">
-							Front-end developer
-						</h3>
+						<PreviewJob job="Front-end Developer" />
 
 						<div className="photo__preview js__profile-image" />
 

@@ -1,5 +1,9 @@
 import React from 'react';
-import logo from './logo.svg';
+import logoDisena from './images/logo-disena-aventura.jpg';
+import logoAdalab from './images/logo-adalab.png';
+import logoAwesome from './images/logo-awesome-profile-cards.svg';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import './App.css';
 import PreviewSection from './components/PreviewSection';
 
@@ -40,19 +44,7 @@ function App() {
 				</symbol>
 			</svg>
 
-			<header className="app-header">
-				<div className="column-center">
-					<h1>
-						<a href="index.html" className="link-home">
-							<img
-								className="app-header__logo"
-								src="./assets/images/logo-awesome-profile-cards.svg"
-								alt="Awesome profile cards"
-							/>
-						</a>
-					</h1>
-				</div>
-			</header>
+			<Header link="index.html" logoSrc={logoAwesome} />
 
 			<main className="main-content column-center">
 				<PreviewSection />
@@ -316,32 +308,7 @@ function App() {
 				</section>
 			</main>
 
-			<footer className="footer__page">
-				<div className="footer__flex-wrapper column-center">
-					{' '}
-					<small className="footer__copyright">
-						Awesome profile-cards @2019
-					</small>
-					<div className="logos">
-						<img
-							src="assets/images/logo-disena-aventura.jpg"
-							alt="Logo de Diseña tu aventura"
-							className="footer__image--logo"
-						/>{' '}
-						<a
-							className="footer__link"
-							href="https://adalab.es/"
-							target="blank"
-						>
-							<img
-								src="assets/images/logo-adalab.png"
-								alt="Logo de Adalab"
-								className="footer__image"
-							/>
-						</a>
-					</div>
-				</div>
-			</footer>
+			<Footer firstLogo={logoDisena} secondLogo={logoAdalab} />
 		</div>
 	);
 }
