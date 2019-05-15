@@ -1,4 +1,5 @@
 import React from 'react';
+import icoTrash from '../images/trash.svg';
 import PreviewName from './PreviewName';
 import PreviewJob from './PreviewJob';
 
@@ -8,11 +9,7 @@ class PreviewSection extends React.Component {
 			<section className="preview__section grid-item__card bgc-color-green">
 				<div className="preview__section--container">
 					<button className="reset__button">
-						<img
-							className="trash-icon"
-							src="assets/images/trash.svg"
-							alt="imagen reset"
-						/>
+						<img className="trash-icon" src={icoTrash} alt="imagen reset" />
 						Reset
 					</button>
 					<div className="preview__card">
