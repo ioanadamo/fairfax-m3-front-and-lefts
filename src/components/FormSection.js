@@ -166,7 +166,7 @@ class FormSection extends React.Component {
                                 type="tel"
                                 id="phoneNumber"
                                 placeholder="123456789"
-                                maxlength="9"
+                                maxLength="9"
                                 name="phone"
                                 pattern="^\d{3}\d{3}\d{3}$"
                                 title="ej: 123456789"
