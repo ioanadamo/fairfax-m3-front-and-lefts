@@ -1,6 +1,6 @@
 import React from 'react';
-import PreviewName from './components/PreviewName';
-import PreviewJob from './components/PreviewJob';
+import PreviewName from './PreviewName';
+import PreviewJob from './PreviewJob';
 
 class PreviewSection extends React.Component {
 	render() {
