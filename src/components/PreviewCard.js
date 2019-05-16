@@ -7,9 +7,9 @@ class PreviewCard extends React.Component {
 		return (
 			<div className="preview__card">
 				<div className="deco-rectangle__card" />
-				<PreviewName nameSurname="Nombre Apellidos" />
+				<PreviewName nameSurname={this.props.dataUser.name} />
 
-				<PreviewJob job="Front-end Developer" />
+				<PreviewJob job={this.props.dataUser.job} />
 
 				<div className="photo__preview js__profile-image" />
 

@@ -11,7 +11,7 @@ class PreviewSection extends React.Component {
 						<img className="trash-icon" src={icoTrash} alt="imagen reset" />
 						Reset
 					</button>
-					<PreviewCard />
+					<PreviewCard dataUser={this.props.dataUser}/>
 				</div>
 			</section>
 		);
