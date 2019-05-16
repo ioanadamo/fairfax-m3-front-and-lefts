@@ -25,6 +25,7 @@ function FillCollapsible(props) {
           <input
             onChange={props.actionToPerform}
             className="item__info"
+            value={props.dataUser.name}
             type="text"
             id="fullName"
             data-id="card-name"
@@ -40,6 +41,7 @@ function FillCollapsible(props) {
           <input
             onChange={props.actionToPerform}
             className="item__info"
+            value={props.dataUser.job}
             type="text"
             id="rol"
             data-id="card-job"
