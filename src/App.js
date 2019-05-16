@@ -13,8 +13,8 @@ import './App.css';
 class App extends React.Component{
   constructor(props){
 	super(props);
-	this.state = this.state = {
-		palette : 3,
+	this.state = {
+		palette : 2,
 	}
   }
   render(){

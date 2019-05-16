@@ -3,19 +3,13 @@ import React from 'react';
 class Palettes extends React.Component{
     constructor(props){
         super(props)
-        this.handleClick1 = this.handleClick1.bind(this);
-        this.handleClick2 = this.handleClick2.bind(this);
-        this.handleClick3 = this.handleClick3.bind(this);
+        this.handleClick = this.handleClick.bind(this);
+    
     }
-    handleClick1(){
-        console.log('1');
+    handleClick(event){
+        console.log(event.currentTarget.value);
     }
-    handleClick2(){
-        console.log('2');
-    }
-    handleClick3(){
-        console.log('3');
-    }
+   
     render(){
         return(
 
@@ -32,7 +26,7 @@ class Palettes extends React.Component{
                         type="radio"
                         value="1"
                         name="palette"
-                        onClick = {this.handleClick1}
+                        onClick = {this.handleClick}
                     />{' '}
                     <span className="control__indicator" />
                     <span className="box-wrapper">
@@ -52,7 +46,7 @@ class Palettes extends React.Component{
                         type="radio"
                         value="2"
                         name="palette"
-                        onClick = {this.handleClick2}
+                        onClick = {this.handleClick}
                     />{' '}
                     <span className="control__indicator" />
                     <span className="box-wrapper">
@@ -72,7 +66,7 @@ class Palettes extends React.Component{
                         type="radio"
                         value="3"
                         name="palette"
-                        onClick = {this.handleClick3}
+                        onClick = {this.handleClick}
                     />{' '}
                     <span className="control__indicator" />
                     <span className="box-wrapper">
