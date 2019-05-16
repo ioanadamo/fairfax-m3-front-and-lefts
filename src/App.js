@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import PreviewName from "./components/PreviewName";
 import PreviewJob from "./components/PreviewJob";
 import "./App.css";
+import Collapsible from "./components/Collapsible";
 
 function App() {
   return (
@@ -108,23 +109,8 @@ function App() {
         </section>
         <section className="grid-item__fill-fields">
           <form action="/signup" method="post" className="main-form">
-            <section className="panel">
-              <div className="panel__dropdown">
-                <div className="title-image__wrapper">
-                  <img
-                    className="dropdown__icon-section"
-                    src="./assets/images/ungroup.svg"
-                    alt=""
-                  />
-                  <h2 className="dropdown__title">Diseña</h2>
-                </div>
-                <img
-                  className="dropdown__arrow--up"
-                  id="dropdown__down-arrow--design"
-                  src="./assets/images/down-arrow.svg"
-                  alt="Abrir panel diseña"
-                />
-              </div>
+          <section className="panel">
+              <Collapsible />
               <div className="panel__design-radios panel--openFlex">
                 <p className="radios__title">Colores</p>
                 <div className="radios__picker">
@@ -190,6 +176,8 @@ function App() {
               </div>
             </section>
             <section className="panel">
+
+
               <div className="panel__dropdown">
                 <div className="title-image__wrapper">
                   <img
@@ -206,6 +194,9 @@ function App() {
                   alt="Abrir panel rellena"
                 />
               </div>
+
+
+              
               <fieldset className="panel__fill-form panel--close">
                 <div className="dropdown__item">
                   <label className="item__label" for="name">
