@@ -6,10 +6,7 @@ import PreviewJob from './PreviewJob';
 class PreviewSection extends React.Component {
 	constructor(props){
 		super(props);
-		this.prueba = console.log('holi');
-		this.state = {
-			palette : 1,
-		}
+		
 		
 	}
 	getTheme(number){
@@ -26,7 +23,7 @@ class PreviewSection extends React.Component {
 		return theme;
 	}
 	render() {
-		const theme = this.getTheme(this.state.palette);		
+		const theme = this.getTheme(this.props.palette);		
 		return (
 			<section className="preview__section grid-item__card bgc-color-green">
 				<div className="preview__section--container">

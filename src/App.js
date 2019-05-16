@@ -12,7 +12,10 @@ import './App.css';
 
 class App extends React.Component{
   constructor(props){
-    super(props);
+	super(props);
+	this.state = this.state = {
+		palette : 3,
+	}
   }
   render(){
     
@@ -22,7 +25,7 @@ class App extends React.Component{
       <Header link="index.html" logoSrc={logoAwesome} />
 
 			<main className="main-content column-center">
-				<PreviewSection />
+				<PreviewSection palette = {this.state.palette} />
         <FormSection />
 			</main>
       <Footer firstLogo={logoDisena} secondLogo={logoAdalab} />
