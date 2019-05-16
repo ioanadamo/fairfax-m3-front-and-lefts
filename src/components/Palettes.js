@@ -1,11 +1,22 @@
 import React from 'react';
 
 class Palettes extends React.Component{
+    constructor(props){
+        super(props)
+        this.handleClick1 = this.handleClick1.bind(this);
+        this.handleClick2 = this.handleClick2.bind(this);
+        this.handleClick3 = this.handleClick3.bind(this);
+    }
+    handleClick1(){
+        console.log('1');
+    }
+    handleClick2(){
+        console.log('2');
+    }
+    handleClick3(){
+        console.log('3');
+    }
     render(){
-
-
-
-
         return(
 
             <div className="panel__design-radios panel--openFlex">
@@ -21,7 +32,7 @@ class Palettes extends React.Component{
                         type="radio"
                         value="1"
                         name="palette"
-                        checked
+                        onClick = {this.handleClick1}
                     />{' '}
                     <span className="control__indicator" />
                     <span className="box-wrapper">
@@ -41,6 +52,7 @@ class Palettes extends React.Component{
                         type="radio"
                         value="2"
                         name="palette"
+                        onClick = {this.handleClick2}
                     />{' '}
                     <span className="control__indicator" />
                     <span className="box-wrapper">
@@ -60,6 +72,7 @@ class Palettes extends React.Component{
                         type="radio"
                         value="3"
                         name="palette"
+                        onClick = {this.handleClick3}
                     />{' '}
                     <span className="control__indicator" />
                     <span className="box-wrapper">

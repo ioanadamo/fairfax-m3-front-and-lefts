@@ -4,7 +4,30 @@ import PreviewName from './PreviewName';
 import PreviewJob from './PreviewJob';
 
 class PreviewSection extends React.Component {
+	constructor(props){
+		super(props);
+		this.state = {
+			palette : 1,
+		}
+		
+	}
+	getTheme(number){
+		let theme ;
+		if (number===1){
+			 theme = 'theme-green'
+		}
+		else if(number===2){
+			 theme = 'theme-red'
+		}
+		else if (number===3){
+			theme = 'theme-blue'
+		}
+		return theme;
+	}
 	render() {
+		const theme = this.getTheme(this.state.palette);
+		
+
 		return (
 			<section className="preview__section grid-item__card bgc-color-green">
 				<div className="preview__section--container">
@@ -12,7 +35,7 @@ class PreviewSection extends React.Component {
 						<img className="trash-icon" src={icoTrash} alt="imagen reset" />
 						Reset
 					</button>
-					<div className="preview__card">
+					<div className={`preview__card ${theme}`}>
 						<div className="deco-rectangle__card" />
 						<PreviewName nameSurname="Nombre Apellidos" />
 
