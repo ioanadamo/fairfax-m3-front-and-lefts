@@ -16,7 +16,16 @@ class App extends React.Component{
 	this.state = {
 		palette : 2,
 	}
+	this.changeColor = this.changeColor.bind(this);
   }
+
+  changeColor(event){
+	console.log(event.currentTarget.value);
+	this.setState({
+		palette:event.currentTarget.value,
+	});
+	console.log('adios');
+}
   render(){
     
   return (
@@ -26,7 +35,7 @@ class App extends React.Component{
 
 			<main className="main-content column-center">
 				<PreviewSection palette = {this.state.palette} />
-        <FormSection />
+        <FormSection actionPerform ={this.changeColor}/>
 			</main>
       <Footer firstLogo={logoDisena} secondLogo={logoAdalab} />
     </div>

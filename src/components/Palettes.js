@@ -3,12 +3,10 @@ import React from 'react';
 class Palettes extends React.Component{
     constructor(props){
         super(props)
-        this.handleClick = this.handleClick.bind(this);
+        this.handleClick = this.props.actionPerform;
     
     }
-    handleClick(event){
-        console.log(event.currentTarget.value);
-    }
+    
    
     render(){
         return(
