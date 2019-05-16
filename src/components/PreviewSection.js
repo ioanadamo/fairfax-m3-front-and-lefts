@@ -6,18 +6,20 @@ import PreviewJob from './PreviewJob';
 class PreviewSection extends React.Component {
 	constructor(props){
 		super(props);
-		
+		// this.state = {
+		// 	palette:this.props.palette,
+		// }
 		
 	}
 	getTheme(number){
 		let theme ;
-		if (number===1){
+		if (number==1){
 			 theme = 'theme-green'
 		}
-		else if(number===2){
+		else if(number==2){
 			 theme = 'theme-red'
 		}
-		else if (number===3){
+		else if (number==3){
 			theme = 'theme-blue'
 		}
 		return theme;
