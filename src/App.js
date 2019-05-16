@@ -10,7 +10,12 @@ import FormSection from './components/FormSection';
 import './App.css';
 
 
-function App() {
+class App extends React.Component{
+  constructor(props){
+    super(props);
+  }
+  render(){
+    
   return (
     <div className="place-items__cardmaker">
       <Svgs />
@@ -23,6 +28,7 @@ function App() {
       <Footer firstLogo={logoDisena} secondLogo={logoAdalab} />
     </div>
   );
+}
 }
 
 export default App;
