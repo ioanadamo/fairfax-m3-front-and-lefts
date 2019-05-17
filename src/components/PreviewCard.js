@@ -32,7 +32,6 @@ class PreviewCard extends React.Component {
 
 				<ul className="social__card--list">
 					<PreviewMobile phone={this.props.dataUser.phone} />
-
 					<PreviewEmail email={this.props.dataUser.email} />
 					<PreviewLinkedin linkedin={this.props.dataUser.linkedin} />
 					<PreviewGithub githubUser={this.props.dataUser.github} />

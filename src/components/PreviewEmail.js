@@ -5,7 +5,10 @@ class PreviewEmail extends React.Component {
 		return (
 			<li className="social__icons email-icon">
 				{' '}
-				<a className="email__card">
+				<a
+					href={this.props.email ? `mailto:${this.props.email}` : ''}
+					className="email__card"
+				>
 					<svg className="wrap-icon">
 						<use href="#ico-letter" />
 					</svg>

@@ -93,6 +93,8 @@ function FillCollapsible(props) {
 						Email <span className="marker"> *</span>
 					</label>
 					<input
+						onChange={props.actionToPerform}
+						value={props.dataUser.email}
 						className="item__info"
 						type="email"
 						id="email"
