@@ -116,7 +116,9 @@ function FillCollapsible(props) {
             GitHub
           </label>
           <input
+            onChange={props.actionToPerform}
             className="item__info"
+            value={props.dataUser.github}
             type="text"
             id="github"
             placeholder="monsterYey"
