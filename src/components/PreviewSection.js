@@ -3,7 +3,9 @@ import icoTrash from '../images/trash.svg';
 import PreviewCard from './PreviewCard';
 
 class PreviewSection extends React.Component {
+	
 	render() {
+				
 		return (
 			<section className="preview__section grid-item__card bgc-color-green">
 				<div className="preview__section--container">
