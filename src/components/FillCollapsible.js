@@ -104,6 +104,8 @@ function FillCollapsible(props) {
             Linkedin
           </label>
           <input
+            onChange={props.actionToPerform}
+            value={props.dataUser.linkedin}
             className="item__info"
             type="url"
             id="linkedin"
