@@ -1,6 +1,7 @@
 import React from 'react';
 import PreviewName from './PreviewName';
 import PreviewJob from './PreviewJob';
+import PreviewMobile from './PreviewMobile';
 
 class PreviewCard extends React.Component {
 	render() {
@@ -14,14 +15,7 @@ class PreviewCard extends React.Component {
 				<div className="photo__preview js__profile-image" />
 
 				<ul className="social__card--list">
-					<li className="social__icons mobile-icon">
-						{' '}
-						<a href="" id="mobile-link">
-							<svg className="wrap-icon">
-								<use href="#ico-mobile" />
-							</svg>
-						</a>
-					</li>
+					<PreviewMobile phone={this.props.dataUser.phone} />
 
 					<li className="social__icons email-icon">
 						{' '}
