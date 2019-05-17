@@ -4,10 +4,11 @@ import logoAdalab from './images/logo-adalab.png';
 import logoAwesome from './images/logo-awesome-profile-cards.svg';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Svgs from "./components/Svgs";
+import Svgs from './components/Svgs';
 import PreviewSection from './components/PreviewSection';
 import FormSection from './components/FormSection';
 import './App.css';
+
 
 
 class App extends React.Component {
