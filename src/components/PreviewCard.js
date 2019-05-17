@@ -2,6 +2,7 @@ import React from 'react';
 import PreviewName from './PreviewName';
 import PreviewJob from './PreviewJob';
 import PreviewLinkedin from './PreviewLinkedin';
+import PreviewGithub from './PreviewGithub';
 
 class PreviewCard extends React.Component {
 	render() {
@@ -34,15 +35,8 @@ class PreviewCard extends React.Component {
 					</li>
 
 					<PreviewLinkedin linkedin={this.props.dataUser.linkedin} />
+					<PreviewGithub githubUser={this.props.dataUser.github}/>
 
-					<li className="social__icons github-icon">
-						{' '}
-						<a className="link-github" href="" target="_blank">
-							<svg className="wrap-icon">
-								<use href="#ico-github" />
-							</svg>
-						</a>
-					</li>
 				</ul>
 			</div>
 		);
