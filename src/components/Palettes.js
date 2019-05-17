@@ -3,7 +3,7 @@ import React from 'react';
 class Palettes extends React.Component {
     constructor(props) {
         super(props)
-        this.handleClick = this.props.changeColorFunction;
+        this.handleClick = this.props.actionToPerform;
     }
 
     render() {
@@ -21,7 +21,7 @@ class Palettes extends React.Component {
                             type="radio"
                             value="1"
                             name="palette"
-                            checked={this.props.paletteNumber == 1}
+                            checked={this.props.dataUser.palette === "1"}
                             onClick={this.handleClick}
                         />
                         <span className="control__indicator" />
@@ -41,7 +41,7 @@ class Palettes extends React.Component {
                             type="radio"
                             value="2"
                             name="palette"
-                            checked={this.props.paletteNumber == 2}
+                            checked={this.props.dataUser.palette === "2"}
                             onClick={this.handleClick}
                         />
                         <span className="control__indicator" />
@@ -61,7 +61,7 @@ class Palettes extends React.Component {
                             type="radio"
                             value="3"
                             name="palette"
-                            checked={this.props.paletteNumber == 3}
+                            checked={this.props.dataUser.palette === '3'}
                             onClick={this.handleClick}
                         />
                         <span className="control__indicator" />
