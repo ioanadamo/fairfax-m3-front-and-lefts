@@ -3,7 +3,7 @@ import React from 'react';
 class Palettes extends React.Component {
     constructor(props) {
         super(props)
-        this.handleClick = this.props.actionPerform;
+        this.handleClick = this.props.changeColorFunction;
     }
 
     render() {

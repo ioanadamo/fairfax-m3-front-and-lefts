@@ -28,7 +28,7 @@ class FormSection extends React.Component {
                             alt="Abrir panel diseña"
                         />
                     </div>
-                   <Palettes paletteNumber={this.props.paletteNumber} actionPerform={this.props.actionPerform}/>
+                   <Palettes paletteNumber={this.props.paletteNumber} changeColorFunction={this.props.changeColorFunction}/>
                 </section>
                 <section className="panel">
                     <div className="panel__dropdown">

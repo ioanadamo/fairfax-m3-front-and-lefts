@@ -32,7 +32,7 @@ class App extends React.Component {
 				<Header link="index.html" logoSrc={logoAwesome} />
 				<main className="main-content column-center">
 					<PreviewSection palette={this.state.palette} />
-					<FormSection paletteNumber={this.state.palette} actionPerform={this.changeColor} />
+					<FormSection paletteNumber={this.state.palette} changeColorFunction={this.changeColor} />
 				</main>
 				<Footer firstLogo={logoDisena} secondLogo={logoAdalab} />
 			</div>
