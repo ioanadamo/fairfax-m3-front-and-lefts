@@ -4,13 +4,8 @@ import PreviewName from './PreviewName';
 import PreviewJob from './PreviewJob';
 
 class PreviewSection extends React.Component {
-	constructor(props){
-		super(props);
-		// this.state = {
-		// 	palette:this.props.palette,
-		// }
-		
-	}
+	
+//Esta función getThem recibe un número por props 1,2 o 3 y la convierte en la clase correspondiente
 	getTheme(number){
 		let theme ;
 		if (number==1){

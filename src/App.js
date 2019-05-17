@@ -10,37 +10,34 @@ import FormSection from './components/FormSection';
 import './App.css';
 
 
-class App extends React.Component{
-  constructor(props){
-	super(props);
-	this.state = {
-		palette : 2,
+class App extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = {
+			palette: 1,
+		}
+		this.changeColor = this.changeColor.bind(this);
 	}
-	this.changeColor = this.changeColor.bind(this);
-  }
 
-  changeColor(event){
-	console.log(event.currentTarget.value);
-	this.setState({
-		palette:event.currentTarget.value,
-	});
-	console.log('adios');
-}
-  render(){
-    
-  return (
-    <div className="place-items__cardmaker">
-      <Svgs />
-      <Header link="index.html" logoSrc={logoAwesome} />
+	changeColor(event) {
+		this.setState({
+			palette: event.currentTarget.value,
+		});
+	}
 
-			<main className="main-content column-center">
-				<PreviewSection palette = {this.state.palette} />
-        <FormSection actionPerform ={this.changeColor}/>
-			</main>
-      <Footer firstLogo={logoDisena} secondLogo={logoAdalab} />
-    </div>
-  );
-}
+	render() {
+		return (
+			<div className="place-items__cardmaker">
+				<Svgs />
+				<Header link="index.html" logoSrc={logoAwesome} />
+				<main className="main-content column-center">
+					<PreviewSection palette={this.state.palette} />
+					<FormSection paletteNumber={this.state.palette} actionPerform={this.changeColor} />
+				</main>
+				<Footer firstLogo={logoDisena} secondLogo={logoAdalab} />
+			</div>
+		);
+	}
 }
 
 export default App;

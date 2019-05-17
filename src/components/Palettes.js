@@ -1,14 +1,15 @@
 import React from 'react';
+import { thisTypeAnnotation } from '@babel/types';
 
 class Palettes extends React.Component{
     constructor(props){
         super(props)
         this.handleClick = this.props.actionPerform;
-    
+        
     }
     
-   
     render(){
+        
         return(
 
             <div className="panel__design-radios panel--openFlex">
@@ -24,6 +25,8 @@ class Palettes extends React.Component{
                         type="radio"
                         value="1"
                         name="palette"
+                        checked={this.props.paletteNumber==1}
+                       
                         onClick = {this.handleClick}
                     />{' '}
                     <span className="control__indicator" />
@@ -44,6 +47,7 @@ class Palettes extends React.Component{
                         type="radio"
                         value="2"
                         name="palette"
+                        checked={this.props.paletteNumber==2}
                         onClick = {this.handleClick}
                     />{' '}
                     <span className="control__indicator" />
@@ -64,8 +68,9 @@ class Palettes extends React.Component{
                         type="radio"
                         value="3"
                         name="palette"
+                        checked={this.props.paletteNumber==3}
                         onClick = {this.handleClick}
-                    />{' '}
+                    />
                     <span className="control__indicator" />
                     <span className="box-wrapper">
                         <span className="box box-color7" />
