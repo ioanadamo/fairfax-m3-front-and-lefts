@@ -5,9 +5,24 @@ import PreviewLinkedin from './PreviewLinkedin';
 import PreviewGithub from './PreviewGithub';
 
 class PreviewCard extends React.Component {
+	//Esta función getThem recibe un número por props 1,2 o 3 y la convierte en la clase correspondiente
+	getTheme(number){
+		let theme ;
+		if (number==='1'){
+			 theme = 'theme-green'
+		}
+		else if(number==='2'){
+			 theme = 'theme-red'
+		}
+		else if (number=='3'){
+			theme = 'theme-blue'
+		}
+		return theme;
+	}
 	render() {
+		const theme = this.getTheme(this.props.dataUser.palette);
 		return (
-			<div className="preview__card">
+				<div className={`preview__card ${theme}`}>
 				<div className="deco-rectangle__card" />
 				<PreviewName nameSurname={this.props.dataUser.name} />
 
@@ -44,3 +59,7 @@ class PreviewCard extends React.Component {
 }
 
 export default PreviewCard;
+
+
+
+
