@@ -4,6 +4,7 @@ import PreviewJob from './PreviewJob';
 import PreviewMobile from './PreviewMobile';
 import PreviewLinkedin from './PreviewLinkedin';
 import PreviewGithub from './PreviewGithub';
+import PreviewEmail from './PreviewEmail';
 
 class PreviewCard extends React.Component {
 	//Esta función getThem recibe un número por props 1,2 o 3 y la convierte en la clase correspondiente
@@ -32,15 +33,7 @@ class PreviewCard extends React.Component {
 				<ul className="social__card--list">
 					<PreviewMobile phone={this.props.dataUser.phone} />
 
-					<li className="social__icons email-icon">
-						{' '}
-						<a className="email__card">
-							<svg className="wrap-icon">
-								<use href="#ico-letter" />
-							</svg>
-						</a>
-					</li>
-
+					<PreviewEmail email={this.props.dataUser.email} />
 					<PreviewLinkedin linkedin={this.props.dataUser.linkedin} />
 					<PreviewGithub githubUser={this.props.dataUser.github} />
 				</ul>
