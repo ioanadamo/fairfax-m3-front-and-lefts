@@ -10,12 +10,14 @@ import FormSection from "./components/FormSection";
 import DefaultPhoto from "./images/user-photo-default.png"
 import "./App.css";
 
+
+
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       dataUser: {
-        palette: "",
+        palette: "1",
         name: "",
         job: "",
         phone: "",
