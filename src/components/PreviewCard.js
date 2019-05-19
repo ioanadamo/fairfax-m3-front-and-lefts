@@ -27,7 +27,7 @@ class PreviewCard extends React.Component {
 
 				<PreviewJob job={this.props.dataUser.job} />
 
-				<div className="photo__preview js__profile-image" />
+				<div className="photo__preview" style={{backgroundImage:`url(${this.props.dataUser.photo})`}}/>
 
 				<ul className="social__card--list">
 					<PreviewMobile phone={this.props.dataUser.phone} />

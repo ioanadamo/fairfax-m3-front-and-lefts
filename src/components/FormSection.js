@@ -30,7 +30,12 @@ class FormSection extends React.Component {
                     </div>
                    <Palettes dataUser={this.props.dataUser} actionToPerform={this.props.actionToPerform}/>
                 </section>
-                <FillCollapsible dataUser={this.props.dataUser} actionToPerform={this.props.actionToPerform}/>
+                <FillCollapsible
+            dataUser={this.props.dataUser}
+            actionToPerform={this.props.actionToPerform}
+            updatePhoto={this.props.updatePhoto}
+            isPhotoDefault={this.props.isPhotoDefault}
+          />
                 <section className="panel">
                     <div className="panel__dropdown">
                         <div className="title-image__wrapper">
