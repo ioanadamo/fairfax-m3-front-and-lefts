@@ -1,4 +1,5 @@
 import React from 'react';
+import GetPhoto from './InputFile';
 import icoKeyboard from '../images/keyboard.svg';
 import icoDownArrow from '../images/down-arrow.svg';
 
@@ -54,21 +55,11 @@ function FillCollapsible(props) {
 					<label className="item__label" htmlFor="photo">
 						Imagen de perfil
 					</label>
-					<div className="item__info--image-container">
-						<input
-							type="file"
-							className="js__profile-upload-btn item__info hidden__file--button"
-							name="photo"
-							id="personalImage"
-						/>
-						<button
-							type="button"
-							className="item__info--button js__profile-trigger"
-						>
-							Añadir imagen
-						</button>
-						<div className="js__profile-preview item__info--thumbnail" />
-					</div>
+					<GetPhoto
+						photo={props.dataUser.photo}
+						updatePhoto={props.updatePhoto}
+						isPhotoDefault={props.isPhotoDefault}
+					/>
 				</div>
 				<div className="dropdown__item">
 					<label className="item__label" htmlFor="phone">
