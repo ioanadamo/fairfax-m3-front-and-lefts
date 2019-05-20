@@ -27,9 +27,11 @@ class App extends React.Component {
         photo: DefaultPhoto,
       },
       isPhotoDefault: true,
+      isCollapsibleOpen: 'designid',
 	};
 	this.handleChange=this.handleChange.bind(this)
-	this.updatePhoto=this.updatePhoto.bind(this)
+  this.updatePhoto=this.updatePhoto.bind(this)
+  this.handleCollapsible=this.handleCollapsible.bind(this)
   }
 
   handleChange(event) {
@@ -55,6 +57,21 @@ class App extends React.Component {
       }
     })
   }
+  handleCollapsible(event) {
+    const newIsCollapsibleOpen = event.currentTarget.getAttribute('data-id');
+    this.setState(prevState => {
+      if (newIsCollapsibleOpen === prevState.isCollapsibleOpen) {
+        return {
+          isCollapsibleOpen: null
+        }
+      } else {
+        return {
+          isCollapsibleOpen: newIsCollapsibleOpen
+        }
+      }
+    });
+  }
+
   render() {
     return (
       <div className="place-items__cardmaker">
@@ -64,6 +81,8 @@ class App extends React.Component {
         <main className="main-content column-center">
           <PreviewSection dataUser={this.state.dataUser} />
           <FormSection
+            collapsibleAction={this.handleCollapsible}
+            isCollapsibleOpen={this.state.isCollapsibleOpen}
             dataUser={this.state.dataUser}
             actionToPerform={this.handleChange}
             updatePhoto={this.updatePhoto}
