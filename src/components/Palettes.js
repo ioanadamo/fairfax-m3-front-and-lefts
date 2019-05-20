@@ -1,4 +1,6 @@
 import React from 'react';
+import icoUngroup from "../images/ungroup.svg";
+import icoDownArrow from "../images/down-arrow.svg";
 
 class Palettes extends React.Component {
     constructor(props) {
@@ -7,8 +9,27 @@ class Palettes extends React.Component {
     }
 
     render() {
+        	// isCollapsibleOpen={this.props.isCollapsibleOpen}
+	// collapsibleAction={this.props.collapsibleAction}
         return (
-            <div className="panel__design-radios panel--openFlex">
+            <section className="panel">
+            <div className="panel__dropdown" data-id='designid' onClick={this.props.collapsibleAction}>
+              <div className="title-image__wrapper">
+                <img
+                  className="dropdown__icon-section"
+                  src={icoUngroup}
+                  alt=""
+                />
+                <h2 className="dropdown__title">Diseña</h2>
+              </div>
+              <img
+                className="dropdown__arrow--up"
+                id="dropdown__down-arrow--design"
+                src={icoDownArrow}
+                alt="Abrir panel diseña"
+              />
+            </div>
+            <div className={`panel__design-radios panel--openFlex ${this.props.isCollapsibleOpen === 'designid' ? '' : 'panel--close'}`}>
                 <p className="radios__title">Colores</p>
                 <div className="radios__picker">
                     <label
@@ -73,6 +94,8 @@ class Palettes extends React.Component {
                     </label>
                 </div>
             </div>
+          </section>
+
         );
     }
 

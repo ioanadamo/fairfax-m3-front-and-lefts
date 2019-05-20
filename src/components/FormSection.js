@@ -1,9 +1,8 @@
 import React from "react";
-import icoUngroup from "../images/ungroup.svg";
-import icoDownArrow from "../images/down-arrow.svg";
 import icoIdCard from "../images/id-card.svg";
 import icoShare from "../images/share.svg";
 import icoTwitter from "../images/twitter.svg";
+import icoDownArrow from "../images/down-arrow.svg";
 import Palettes from "./Palettes";
 import FillCollapsible from "./FillCollapsible";
 
@@ -12,28 +11,12 @@ class FormSection extends React.Component {
     return (
       <section className="grid-item__fill-fields">
         <form action="/signup" method="post" className="main-form">
-          <section className="panel">
-            <div className="panel__dropdown">
-              <div className="title-image__wrapper">
-                <img
-                  className="dropdown__icon-section"
-                  src={icoUngroup}
-                  alt=""
-                />
-                <h2 className="dropdown__title">Diseña</h2>
-              </div>
-              <img
-                className="dropdown__arrow--up"
-                id="dropdown__down-arrow--design"
-                src={icoDownArrow}
-                alt="Abrir panel diseña"
-              />
-            </div>
-            <Palettes
-              dataUser={this.props.dataUser}
-              actionToPerform={this.props.actionToPerform}
-            />
-          </section>
+          <Palettes
+            isCollapsibleOpen={this.props.isCollapsibleOpen}
+            collapsibleAction={this.props.collapsibleAction}
+            dataUser={this.props.dataUser}
+            actionToPerform={this.props.actionToPerform}
+          />
           <FillCollapsible
             isCollapsibleOpen={this.props.isCollapsibleOpen}
             collapsibleAction={this.props.collapsibleAction}
