@@ -1,14 +1,14 @@
 import React from "react";
-import Palettes from "./Palettes";
 import FillCollapsible from "./FillCollapsible";
 import ShareCollapsible from "./ShareCollapsible";
+import DesignCollapsible from "./DesignCollapsible";
 
 class FormSection extends React.Component {
   render() {
     return (
       <section className="grid-item__fill-fields">
         <form action="/signup" method="post" className="main-form">
-          <Palettes
+          <DesignCollapsible
             isCollapsibleOpen={this.props.isCollapsibleOpen}
             collapsibleAction={this.props.collapsibleAction}
             dataUser={this.props.dataUser}

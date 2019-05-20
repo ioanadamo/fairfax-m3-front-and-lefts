@@ -14,7 +14,11 @@ function FillCollapsible(props) {
 					<h2 className="dropdown__title">Rellena</h2>
 				</div>
 				<img
-					className="dropdown__arrow--up"
+					className={`${
+						props.isCollapsibleOpen === "fillid"
+						  ? "dropdown__arrow--up"
+						  : "dropdown__arrow--down"
+					  }`}
 					id="dropdown__down-arrow--fill"
 					src={icoDownArrow}
 					alt="Abrir panel rellena"

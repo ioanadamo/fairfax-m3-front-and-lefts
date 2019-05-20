@@ -10,19 +10,31 @@ function ShareCollapsible(props) {
   return (
     <React.Fragment>
       <section className="panel">
-        <div className="panel__dropdown" data-id='shareid' onClick={props.collapsibleAction}>
+        <div
+          className="panel__dropdown"
+          data-id="shareid"
+          onClick={props.collapsibleAction}
+        >
           <div className="title-image__wrapper">
             <img className="dropdown__icon-section" src={icoShare} alt="" />
             <h2 className="dropdown__title">Comparte</h2>
           </div>
           <img
-            className="dropdown__arrow--up"
+            className={`${
+              props.isCollapsibleOpen === "shareid"
+                ? "dropdown__arrow--up"
+                : "dropdown__arrow--down"
+            }`}
             id="dropdown__down-arrow--share"
             src={icoDownArrow}
             alt="Abrir panel compartir"
           />
         </div>
-        <div className={`align_share ${props.isCollapsibleOpen === 'shareid' ? '' : 'panel--close'}`}>
+        <div
+          className={`align_share ${
+            props.isCollapsibleOpen === "shareid" ? "" : "panel--close"
+          }`}
+        >
           <button className="btn_share" type="submit">
             <img
               className="icon__id-card"
