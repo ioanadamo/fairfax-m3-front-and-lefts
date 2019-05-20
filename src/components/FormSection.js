@@ -35,6 +35,8 @@ class FormSection extends React.Component {
             />
           </section>
           <FillCollapsible
+            isCollapsibleOpen={this.props.isCollapsibleOpen}
+            collapsibleAction={this.props.collapsibleAction}
             dataUser={this.props.dataUser}
             actionToPerform={this.props.actionToPerform}
             updatePhoto={this.props.updatePhoto}

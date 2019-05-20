@@ -4,9 +4,11 @@ import icoKeyboard from '../images/keyboard.svg';
 import icoDownArrow from '../images/down-arrow.svg';
 
 function FillCollapsible(props) {
+	// isCollapsibleOpen={this.props.isCollapsibleOpen}
+	// collapsibleAction={this.props.collapsibleAction}
 	return (
 		<section className="panel">
-			<div className="panel__dropdown">
+			<div className="panel__dropdown" data-id='fillid' onClick={props.collapsibleAction}>
 				<div className="title-image__wrapper">
 					<img className="dropdown__icon-section" src={icoKeyboard} alt="" />
 					<h2 className="dropdown__title">Rellena</h2>
@@ -18,7 +20,7 @@ function FillCollapsible(props) {
 					alt="Abrir panel rellena"
 				/>
 			</div>
-			<fieldset className="panel__fill-form">
+			<fieldset className={`panel__fill-form ${props.isCollapsibleOpen === 'fillid' ? '' : 'panel--close'}`}>
 				<div className="dropdown__item">
 					<label className="item__label" htmlFor="name">
 						Nombre completo <span className="marker"> *</span>
