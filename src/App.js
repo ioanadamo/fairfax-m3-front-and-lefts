@@ -27,7 +27,7 @@ class App extends React.Component {
         photo: DefaultPhoto,
       },
       isPhotoDefault: true,
-      isCollapsibleOpen: null,
+      isCollapsibleOpen: 'designid',
 	};
 	this.handleChange=this.handleChange.bind(this)
   this.updatePhoto=this.updatePhoto.bind(this)
