@@ -1,37 +1,39 @@
-import React from "react";
-import FillCollapsible from "./FillCollapsible";
-import ShareCollapsible from "./ShareCollapsible";
-import DesignCollapsible from "./DesignCollapsible";
+import React from 'react';
+import FillCollapsible from './FillCollapsible';
+import ShareCollapsible from './ShareCollapsible';
+import DesignCollapsible from './DesignCollapsible';
 
 class FormSection extends React.Component {
-  render() {
-    return (
-      <section className="grid-item__fill-fields">
-        <form action="/signup" method="post" className="main-form">
-          <DesignCollapsible
-            isCollapsibleOpen={this.props.isCollapsibleOpen}
-            collapsibleAction={this.props.collapsibleAction}
-            dataUser={this.props.dataUser}
-            actionToPerform={this.props.actionToPerform}
-          />
-          <FillCollapsible
-            isCollapsibleOpen={this.props.isCollapsibleOpen}
-            collapsibleAction={this.props.collapsibleAction}
-            dataUser={this.props.dataUser}
-            actionToPerform={this.props.actionToPerform}
-            updatePhoto={this.props.updatePhoto}
-            isPhotoDefault={this.props.isPhotoDefault}
-          />
-          <ShareCollapsible
-            isCollapsibleOpen={this.props.isCollapsibleOpen}
-            collapsibleAction={this.props.collapsibleAction}
-            dataUser={this.props.dataUser}
-            actionToPerform={this.props.actionToPerform}
-          />
-        </form>
-      </section>
-    );
-  }
+	render() {
+		return (
+			<section className="grid-item__fill-fields">
+				<form action="/signup" method="post" className="main-form">
+					<DesignCollapsible
+						isCollapsibleOpen={this.props.isCollapsibleOpen}
+						collapsibleAction={this.props.collapsibleAction}
+						dataUser={this.props.dataUser}
+						actionToPerform={this.props.actionToPerform}
+					/>
+					<FillCollapsible
+						isCollapsibleOpen={this.props.isCollapsibleOpen}
+						collapsibleAction={this.props.collapsibleAction}
+						dataUser={this.props.dataUser}
+						actionToPerform={this.props.actionToPerform}
+						updatePhoto={this.props.updatePhoto}
+						isPhotoDefault={this.props.isPhotoDefault}
+					/>
+					<ShareCollapsible
+						isCollapsibleOpen={this.props.isCollapsibleOpen}
+						collapsibleAction={this.props.collapsibleAction}
+						dataUser={this.props.dataUser}
+						actionToPerform={this.props.actionToPerform}
+						sendRequest={this.props.sendRequest}
+						linkProvided={this.props.linkProvided}
+					/>
+				</form>
+			</section>
+		);
+	}
 }
 
 export default FormSection;
