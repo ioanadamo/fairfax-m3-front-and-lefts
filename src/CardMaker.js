@@ -32,6 +32,21 @@ class CardMaker extends React.Component {
 		this.handleCollapsible = this.handleCollapsible.bind(this);
 	}
 
+	componentDidMount(){
+		const dataFromCache = JSON.parse(localStorage.getItem('dataUser'));
+		if (dataFromCache) {
+			this.setState({
+				dataUser: dataFromCache,
+			});
+		}
+		
+	}
+
+	componentDidUpdate() {
+		localStorage.setItem('dataUser', JSON.stringify(this.state.dataUser));
+
+	}
+
 	handleChange(event) {
 		const value = event.target.value;
 		const field = event.target.name;
