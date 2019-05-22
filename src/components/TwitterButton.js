@@ -1,9 +1,15 @@
 import React from 'react';
 import icoTwitter from '../images/twitter.svg';
+import { read } from 'fs';
 
 class TwitterButton extends React.Component {
 	render() {
 		return this.props.linkProvided ? (
+			<React.Fragment>
+			<p className="card-create">La tarjeta ha sido creada</p>
+        <a className="card-link" target="_blank" href={this.props.linkProvided}>
+            {this.props.linkProvided}
+        </a>
 			<div className="align_share">
 				{' '}
 				<a
@@ -20,7 +26,8 @@ class TwitterButton extends React.Component {
 					Compartir en Twitter
 				</a>
 			</div>
-		) : <p> Loading... </p>
+			</React.Fragment>
+		) : ''
 	}
 }
 

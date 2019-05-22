@@ -26,7 +26,9 @@ class CardMaker extends React.Component {
 			},
 			isPhotoDefault: true,
 			isCollapsibleOpen: 'designid',
-			linkProvided: ''
+			linkProvided: '',
+			isLoading: false,
+			isButtonClicked: false,
 		};
 		this.handleChange = this.handleChange.bind(this);
 		this.updatePhoto = this.updatePhoto.bind(this);
@@ -35,7 +37,11 @@ class CardMaker extends React.Component {
 		this.sendRequest = this.sendRequest.bind(this);
 	}
 
-	sendRequest() {
+	sendRequest = () => {
+		this.setState({
+			isLoading: true,
+			isButtonClicked: true,
+		});
 		fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
 			method: 'POST',
 			body: JSON.stringify(this.state.dataUser),
@@ -48,7 +54,8 @@ class CardMaker extends React.Component {
 			})
 			.then(response => {
 				this.setState({
-					linkProvided: response.cardURL
+					linkProvided: response.cardURL,
+					isLoading: false
 				});
 			});
 	}
@@ -138,6 +145,8 @@ class CardMaker extends React.Component {
 						isPhotoDefault={this.state.isPhotoDefault}
 						sendRequest={this.sendRequest}
 						linkProvided={this.state.linkProvided}
+						isLoading={this.state.isLoading}
+						isButtonClicked={this.state.isButtonClicked}
 					/>
 				</main>
 				<Footer firstLogo={logoDisena} secondLogo={logoAdalab} />

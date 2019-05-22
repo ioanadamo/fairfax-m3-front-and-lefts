@@ -3,6 +3,7 @@ import icoDownArrow from '../images/down-arrow.svg';
 import icoIdCard from '../images/id-card.svg';
 import icoShare from '../images/share.svg';
 import TwitterButton from './TwitterButton';
+import Loader from './Loader';
 
 function ShareCollapsible(props) {
 	return (
@@ -34,8 +35,9 @@ function ShareCollapsible(props) {
 					}`}
 				>
 					<button
+						disabled={props.isButtonClicked}
 						onClick={props.sendRequest}
-						className="btn_share"
+						className={`btn_share ${props.isButtonClicked ? 'btn_share--disabled' : ''}`}
 						type="submit"
 					>
 						<img
@@ -47,17 +49,11 @@ function ShareCollapsible(props) {
 					</button>
 				</div>
 			</section>
+			<Loader isLoading={props.isLoading}/>
 			<section
-				className={
-					props.linkProvided
-						? `align_share align_share_text panel-design panel__twitter`
-						: `align_share align_share_text panel-design panel__twitter panel--close`
-				}
+				className="align_share align_share_text panel-design panel__twitter"
 			>
-				<p className="card-create">La tarjeta ha sido creada</p>
-				<a className="card-link" target="_blank" href={props.linkProvided}>
-					{props.linkProvided}
-				</a>
+			
 				<TwitterButton linkProvided={props.linkProvided}/>
 			</section>
 		</React.Fragment>
