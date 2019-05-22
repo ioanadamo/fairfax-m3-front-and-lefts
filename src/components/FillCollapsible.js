@@ -4,8 +4,6 @@ import icoKeyboard from "../images/keyboard.svg";
 import icoDownArrow from "../images/down-arrow.svg";
 
 function FillCollapsible(props) {
-  // isCollapsibleOpen={this.props.isCollapsibleOpen}
-  // collapsibleAction={this.props.collapsibleAction}
   return (
     <section className="panel">
       <div
