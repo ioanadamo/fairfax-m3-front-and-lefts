@@ -5,8 +5,6 @@ import icoShare from '../images/share.svg';
 import TwitterButton from './TwitterButton';
 
 function ShareCollapsible(props) {
-	// isCollapsibleOpen={this.props.isCollapsibleOpen}
-	// collapsibleAction={this.props.collapsibleAction}
 	return (
 		<React.Fragment>
 			<section className="panel">
@@ -60,7 +58,7 @@ function ShareCollapsible(props) {
 				<a className="card-link" target="_blank" href={props.linkProvided}>
 					{props.linkProvided}
 				</a>
-				<TwitterButton />
+				<TwitterButton linkProvided={props.linkProvided}/>
 			</section>
 		</React.Fragment>
 	);
