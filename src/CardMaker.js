@@ -31,6 +31,7 @@ class CardMaker extends React.Component {
 		this.handleChange = this.handleChange.bind(this);
 		this.updatePhoto = this.updatePhoto.bind(this);
 		this.handleCollapsible = this.handleCollapsible.bind(this);
+		this.handleReset = this.handleReset.bind(this);
 		this.sendRequest = this.sendRequest.bind(this);
 	}
 
@@ -59,12 +60,10 @@ class CardMaker extends React.Component {
 				dataUser: dataFromCache,
 			});
 		}
-		
 	}
 
 	componentDidUpdate() {
-		localStorage.setItem('dataUser', JSON.stringify(this.state.dataUser));
-
+			localStorage.setItem('dataUser', JSON.stringify(this.state.dataUser));
 	}
 
 	handleChange(event) {
@@ -77,6 +76,7 @@ class CardMaker extends React.Component {
 			}
 		}));
 	}
+
 	updatePhoto(img) {
 		const { dataUser } = this.state;
 		this.setState(prevState => {
@@ -106,6 +106,21 @@ class CardMaker extends React.Component {
 		});
 	}
 
+	handleReset(){
+		this.setState({
+			dataUser: {
+				palette: '1',
+				name: '',
+				job: '',
+				phone: '',
+				email: '',
+				linkedin: '',
+				github: '',
+				photo: DefaultPhoto
+			},
+		});
+	}
+
 	render() {
 		return (
 			<div className="place-items__cardmaker">
@@ -113,7 +128,7 @@ class CardMaker extends React.Component {
 				<Header link="index.html" logoSrc={logoAwesome} />
 
 				<main className="main-content column-center">
-					<PreviewSection dataUser={this.state.dataUser} />
+					<PreviewSection dataUser={this.state.dataUser} actionToReset={this.handleReset}/>
 					<FormSection
 						collapsibleAction={this.handleCollapsible}
 						isCollapsibleOpen={this.state.isCollapsibleOpen}
