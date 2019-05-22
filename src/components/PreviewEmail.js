@@ -3,8 +3,13 @@ import React from 'react';
 class PreviewEmail extends React.Component {
 	render() {
 		return (
-			<li className="social__icons email-icon">
-				{' '}
+			<li
+				className={
+					this.props.email
+						? `social__icons email-icon addBoxShadow__IfInputIsFIlled`
+						: 'social__icons email-icon '
+				}
+			>
 				<a
 					href={this.props.email ? `mailto:${this.props.email}` : ''}
 					className="email__card"

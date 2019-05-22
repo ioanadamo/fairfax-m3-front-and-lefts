@@ -16,7 +16,7 @@ class PreviewSection extends React.Component {
 		return (
 			<section className={`preview__section grid-item__card ${theme}`}>
 				<div className="preview__section--container">
-					<button className="reset__button">
+					<button className="reset__button" onClick={this.props.actionToReset}>
 						<img className="trash-icon" src={icoTrash} alt="imagen reset" />
 						Reset
 					</button>
