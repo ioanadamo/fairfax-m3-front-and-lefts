@@ -2,11 +2,9 @@ import React from 'react';
 import icoDownArrow from '../images/down-arrow.svg';
 import icoIdCard from '../images/id-card.svg';
 import icoShare from '../images/share.svg';
-import icoTwitter from '../images/twitter.svg';
+import TwitterButton from './TwitterButton';
 
 function ShareCollapsible(props) {
-	// isCollapsibleOpen={this.props.isCollapsibleOpen}
-	// collapsibleAction={this.props.collapsibleAction}
 	return (
 		<React.Fragment>
 			<section className="panel">
@@ -60,22 +58,7 @@ function ShareCollapsible(props) {
 				<a className="card-link" target="_blank" href={props.linkProvided}>
 					{props.linkProvided}
 				</a>
-				<div className="align_share">
-					{' '}
-					<a
-						className="twitter-share-button"
-						href='https://twitter.com/intent/tweet?text= Mirad%20que%20tarjeta%20más%20chachi%20he%20creado%20con%20la%20aplicación%20"Awesome%20Profile-cards"&url= '
-						data-size="large"
-						target="_blank"
-					>
-						<img
-							className="icon__twitter"
-							src={icoTwitter}
-							alt="compartir en Twitter"
-						/>
-						Compartir en Twitter
-					</a>
-				</div>
+				<TwitterButton linkProvided={props.linkProvided}/>
 			</section>
 		</React.Fragment>
 	);
