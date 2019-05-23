@@ -8,6 +8,7 @@ import Svgs from './components/Svgs';
 import PreviewSection from './components/PreviewSection';
 import FormSection from './components/FormSection';
 import DefaultPhoto from './images/user-photo-default.png';
+import DefaultImage from './images/defaultImage';
 import './App.css';
 
 class CardMaker extends React.Component {
@@ -22,7 +23,7 @@ class CardMaker extends React.Component {
 				email: '',
 				linkedin: '',
 				github: '',
-				photo: DefaultPhoto
+				photo: DefaultImage
 			},
 			isPhotoDefault: true,
 			isCollapsibleOpen: 'designid',
@@ -33,6 +34,12 @@ class CardMaker extends React.Component {
 		this.handleCollapsible = this.handleCollapsible.bind(this);
 		this.handleReset = this.handleReset.bind(this);
 		this.sendRequest = this.sendRequest.bind(this);
+		this.handleCreateCard = this.handleCreateCard.bind(this);
+	}
+
+	handleCreateCard() {
+		const { name, job, phone, email, linkedin, github } = this.state.dataUser;
+		name && job && phone && email && linkedin && github ? this.sendRequest() : alert('Por favor, rellena todos los campos.');
 	}
 
 	sendRequest() {
@@ -136,7 +143,7 @@ class CardMaker extends React.Component {
 						actionToPerform={this.handleChange}
 						updatePhoto={this.updatePhoto}
 						isPhotoDefault={this.state.isPhotoDefault}
-						sendRequest={this.sendRequest}
+						sendRequest={this.handleCreateCard}
 						linkProvided={this.state.linkProvided}
 					/>
 				</main>
