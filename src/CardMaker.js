@@ -123,7 +123,7 @@ class CardMaker extends React.Component {
 				email: '',
 				linkedin: '',
 				github: '',
-				photo: DefaultPhoto
+				photo: DefaultImage
 			},
 		});
 	}
