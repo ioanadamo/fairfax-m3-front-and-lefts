@@ -53,8 +53,8 @@ function ShareCollapsible(props) {
 			<section
 				className="align_share align_share_text panel-design panel__twitter"
 			>
-			
-				<TwitterButton linkProvided={props.linkProvided}/>
+			<TwitterButton linkProvided={props.linkProvided}/>
+				
 			</section>
 		</React.Fragment>
 	);

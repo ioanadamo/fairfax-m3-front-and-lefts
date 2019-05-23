@@ -1,6 +1,5 @@
 import React from 'react';
 import icoTwitter from '../images/twitter.svg';
-import { read } from 'fs';
 
 class TwitterButton extends React.Component {
 	render() {
@@ -14,7 +13,7 @@ class TwitterButton extends React.Component {
 				{' '}
 				<a
 					className="twitter-share-button"
-					href={`https://twitter.com/intent/tweet?text= Mirad%20que%20tarjeta%20más%20chachi%20he%20creado%20con%20la%20aplicación%20"Awesome%20Profile-cards"&url= ${this.props.linkProvided}`}
+					href={`https://twitter.com/intent/tweet?text= Mirad%20que%20tarjeta%20más%20chachi%20he%20creado%20con%20la%20aplicación%20"Awesome%20Profile-cards"&url=${this.props.linkProvided}`}
 					data-size="large"
 					target="_blank"
 				>
