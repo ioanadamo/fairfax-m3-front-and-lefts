@@ -8,6 +8,7 @@ import Svgs from './components/Svgs';
 import PreviewSection from './components/PreviewSection';
 import FormSection from './components/FormSection';
 import DefaultPhoto from './images/user-photo-default.png';
+import DefaultImage from './images/defaultImage';
 import './App.css';
 
 class CardMaker extends React.Component {
@@ -22,20 +23,32 @@ class CardMaker extends React.Component {
 				email: '',
 				linkedin: '',
 				github: '',
-				photo: DefaultPhoto
+				photo: DefaultImage
 			},
 			isPhotoDefault: true,
 			isCollapsibleOpen: 'designid',
-			linkProvided: ''
+			linkProvided: '',
+			isLoading: false,
+			isButtonClicked: false,
 		};
 		this.handleChange = this.handleChange.bind(this);
 		this.updatePhoto = this.updatePhoto.bind(this);
 		this.handleCollapsible = this.handleCollapsible.bind(this);
 		this.handleReset = this.handleReset.bind(this);
 		this.sendRequest = this.sendRequest.bind(this);
+		this.handleCreateCard = this.handleCreateCard.bind(this);
 	}
 
-	sendRequest() {
+	handleCreateCard() {
+		const { name, job, phone, email, linkedin, github } = this.state.dataUser;
+		name && job && phone && email && linkedin && github ? this.sendRequest() : alert('Por favor, rellena todos los campos.');
+	}
+
+	sendRequest = () => {
+		this.setState({
+			isLoading: true,
+			isButtonClicked: true,
+		});
 		fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
 			method: 'POST',
 			body: JSON.stringify(this.state.dataUser),
@@ -48,7 +61,8 @@ class CardMaker extends React.Component {
 			})
 			.then(response => {
 				this.setState({
-					linkProvided: response.cardURL
+					linkProvided: response.cardURL,
+					isLoading: false
 				});
 			});
 	}
@@ -116,7 +130,7 @@ class CardMaker extends React.Component {
 				email: '',
 				linkedin: '',
 				github: '',
-				photo: DefaultPhoto
+				photo: DefaultImage
 			},
 		});
 	}
@@ -136,8 +150,10 @@ class CardMaker extends React.Component {
 						actionToPerform={this.handleChange}
 						updatePhoto={this.updatePhoto}
 						isPhotoDefault={this.state.isPhotoDefault}
-						sendRequest={this.sendRequest}
+						sendRequest={this.handleCreateCard}
 						linkProvided={this.state.linkProvided}
+						isLoading={this.state.isLoading}
+						isButtonClicked={this.state.isButtonClicked}
 					/>
 				</main>
 				<Footer firstLogo={logoDisena} secondLogo={logoAdalab} />

@@ -29,6 +29,8 @@ class FormSection extends React.Component {
 						actionToPerform={this.props.actionToPerform}
 						sendRequest={this.props.sendRequest}
 						linkProvided={this.props.linkProvided}
+						isLoading={this.props.isLoading}
+						isButtonClicked={this.props.isButtonClicked}
 					/>
 				</form>
 			</section>
