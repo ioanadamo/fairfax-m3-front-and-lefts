@@ -1,68 +1,27 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# AWESOME PROFILE CARDS en REACT
 
-In the project directory, you can run:
+Consiste en una aplicación de creación de tarjetas de visita digitales. Tiene una HomePage (con una breve descripción de las funcionalidades de la página) y un CardMaker, que te permite crear tu propia tarjeta de visita.
 
-### `npm start`
+## ¿Quiénes somos? Front & Lefts
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Hemos recibido un código heredado, creado con JavaScript. Lo hemos refactorizado (corrigiendo errores y haciendo el código más legible) y lo hemos migrado a React.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Somos Front & Lefts:
+* Sandra Pinazo
+* Ioana Moldovan
+* Irene Fuente
+* Marina Rodríguez
 
-### `npm test`
+## Tecnologías
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Este proyecto utiliza, aparte de HTML, CSS3 (SASS) y JavaScript, la librería de React.
 
-### `npm run build`
+## Cómo funciona
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+La aplicación de presenta un formulario con tres campos:
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+* *Diseña:* Define los colores de la tarjeta. 
+* *Rellena:* Define el contenido de la tarjeta y los links de los iconos de contacto.
+* *Comparte:* Crea la tarjeta y da la posibilidad de compartirla: bien mediante Twitter, o directamente con la URL de la tarjeta.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
